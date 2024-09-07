@@ -1,0 +1,617 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@500&family=Montserrat:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(230, 62%, 56%);
+  --title-color: hsl(230, 70%, 16%);
+  --text-color: hsl(230, 16%, 45%);
+  --border-color: hsl(230, 50%, 90%);
+  --white-color: hsl(0, 0%, 100%);
+  --body-color: hsl(230, 100%, 96%);
+  --container-color: hsl(230, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Montagu Slab", serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+button {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: background-color 0.4s;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-weight: var(--font-medium);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== THEME ===============*/
+/*========== Variables Dark theme ==========*/
+
+/*========== 
+	Color changes in some parts of 
+	the website, in dark theme
+==========*/
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1220px;
+  margin-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 5rem 1rem;
+}
+
+.section__title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-family: var(--second-font);
+  margin-bottom: 2rem;
+}
+
+.main {
+  overflow: hidden; /* For animation ScrollReveal */
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--body-color);
+  z-index: var(--z-fixed);
+  transition: box-shadow 0.4s background-color 0.4s;
+}
+
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_logo i {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 5rem;
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+  font-size: 1.5rem;
+}
+
+.nav_logo {
+  font-size: 1.25rem;
+}
+/* Navigation for mobile devices */
+@media screen and (max-width: 1000px) {
+  .nav_menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--container-color);
+    box-shadow: 0 -8px 32px hsla(0, 0, 0, 1);
+  }
+}
+
+.nav_list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+
+.nav_link {
+  color: var(--text-color);
+  transition: color 0.4s;
+}
+
+.nav_link span {
+  display: none;
+}
+.nav_link i {
+  font-size: 1.4rem;
+}
+
+.nav_link:hover {
+  color: pink;
+}
+
+.nav_action {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.nav_action i {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: color 0.4;
+}
+.nav_action i:hover {
+  color: aqua;
+}
+/* Add shadow header */
+.shadow-header {
+  box-shadow: 0 2px 16px hsla(0, 0%, 0%, 0.1);
+}
+
+/* Active link */
+
+/*=============== SEARCH ===============*/
+.search {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: hsla(230, 12%, 96%, 6);
+  backdrop-filter: blur(16px);
+  padding: 8rem 1.5rem;
+  transition: top 0.4s;
+}
+
+.search form {
+  display: flex;
+  align-items: center;
+  column-gap: 5rem;
+  background-color: var(--container-color);
+  border: 2px solid var(--border-color);
+  padding-inline: 1rem;
+}
+
+.search_icon {
+  font-size: 1.25rem;
+  color: var(--title-color);
+}
+
+.search_input {
+  width: 100%;
+  padding-block: 1rem;
+  background-color: var(--container-color);
+  color: var(--text-color);
+}
+
+.search_close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+.search_close:hover {
+  color: red;
+}
+
+/* Show search */
+
+.show-search {
+  top: 0;
+}
+/*=============== LOGIN ===============*/
+.login {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-fixed);
+  background-color: hsla(230, 12%, 96%, 6);
+  backdrop-filter: blur(10px);
+  align-items: center;
+  padding: 1.5rem;
+  text-align: center;
+  transition: top 0.4s;
+}
+
+.login_close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: var(--title-color);
+  cursor: pointer;
+}
+
+.login_close:hover {
+  color: red;
+}
+
+.login_form {
+  row-gap: 1.25rem;
+  background-color: var(--container-color);
+  border: 2px solid var(--border-color);
+  padding: 2rem 1.5rem;
+}
+
+.login_title {
+  font-size: var(--h2-font-size);
+}
+
+.login_group {
+  row-gap: 1.25rem;
+}
+
+.login_label {
+  display: block;
+  text-align: initial;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  margin-bottom: 0.25rem;
+}
+
+.Login_input {
+  width: 80%;
+  background-color: var(--container-color);
+  border: 2px solid var(--border-color);
+  padding: 0.5rem;
+  color: var(--text-color);
+  align-items: center;
+}
+
+.login_signup,
+.login_forgot {
+  display: block;
+  font-size: var(--small-font-size);
+}
+
+.login_signup {
+  margin-bottom: 0.5rem;
+}
+.login_signup a {
+  color: var(--first-color);
+  font-weight: var(--font-medium);
+}
+.login_signup a:hover {
+  color: aqua;
+}
+
+.login_forgot {
+  color: var(--first-color);
+  margin-bottom: 1.25rem;
+}
+.login_button {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Show login */
+.show-login {
+  top: 0%;
+}
+
+/*=============== HOME ===============*/
+.Home_swiper {
+  margin: auto;
+  width: 100%; /* Ensure the swiper takes up the full width */
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px; /* Optional: Add some padding to ensure there's some space on the sides */
+}
+
+.Home_swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto; /* Ensure slides take the width of their content */
+}
+
+@media (max-width: 1220px) {
+  .Home_swiper {
+    padding: 0 16px; /* Adjust padding for smaller screens if necessary */
+  }
+}
+
+/* Ensure swiper is properly aligned and slides are centered */
+.home_images {
+  display: flex; /* Use flexbox for proper alignment */
+  justify-content: center; /* Center the swiper */
+}
+.Home_image {
+  width: 220px;
+  box-shadow: -10px -20px 16px hsla(0, 0%, 0%, 0.1);
+}
+
+.home_article,
+.home_img {
+  width: 220px;
+  display: block;
+  transition: scale 0.4s;
+  align-items: center;
+}
+
+.home_article {
+  scale: 0.8;
+  align-items: center; /* Ensure slides are centered */
+}
+
+.swiper-slide-active,
+.swiper-slide-duplicate-active {
+  scale: 1;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .home_article {
+    width: 180px; /* Adjust width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .home_article {
+    width: 160px; /* Adjust width for mobile screens */
+  }
+}
+/*=============== BUTTON ===============*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--white-color);
+  padding: 1rem 1.5rem;
+  transition: box-shadow 0.4s;
+}
+
+.button:hover {
+  box-shadow: 0 4px 32px hsla(230, 72%, 32%, 0.4);
+}
+/*=============== SERVICES ===============*/
+.services_container {
+  row-gap: 3rem;
+}
+
+.services_card {
+  text-align: center;
+}
+.services_card i {
+  display: block;
+  font-size: 3rem;
+  color: var(--first-color);
+  margin-bottom: 1rem;
+}
+
+.services_title {
+  font-size: var(--h3-font-size);
+  margin-bottom: 0.5rem;
+}
+
+/*=============== FEATURED ===============*/
+.Featured_card {
+  position: relative;
+  text-align: center;
+  background-color: var(--container-color);
+  padding: 2rem;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  transition: border 0.4s background-color 0.4s;
+}
+
+.featured_img {
+  width: 150px;
+  margin: 0 auto 0.75rem;
+}
+
+.featured_title {
+  font-size: var(--h2-font-size);
+  margin-bottom: 0.5rem;
+}
+
+.featured_prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.featured_discount {
+  color: var(--title-color);
+}
+
+.featured_price {
+  font-size: var(--small-font-size);
+  text-decoration: line-through;
+}
+
+.Featured_card .button {
+  cursor: pointer;
+}
+
+.featured_actions {
+  display: inline-flex;
+  flex-direction: column;
+  row-gap: 0.75rem;
+  position: absolute;
+  top: 2rem;
+  right: -1.5rem;
+  transition: right 0.4s;
+}
+
+.featured_actions button {
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--first-color);
+}
+
+.Featured_card:hover .featured_actions {
+  right: 1.5rem;
+}
+/* Swiper class */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: initial;
+  height: initial;
+  background-color: var(--container-color);
+  border: 2px solid var(--border-color);
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  counter-reset: var(--first-color);
+  transition: border 0.4s background-color 0.4s;
+}
+
+/*=============== DISCOUNT ===============*/
+.discount_container {
+  row-gap: 3.25rem;
+}
+.discount_data {
+  text-align: center;
+}
+
+.discount_title {
+  margin-bottom: 1rem;
+}
+
+.discount_description {
+  margin-bottom: 2rem;
+}
+
+.discount_images {
+  display: flex;
+  justify-content: center;
+  scale: 0.8;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.discount_img1,
+.discount_img2,
+.discount_img3 {
+  width: 170px;
+  box-shadow: -10px -20px 16px hsla(0, 0%, 0%, 0.1);
+}
+
+.discount_img1 {
+  transform: translateX(1rem) rotate(-10deg);
+}
+.discount_img2 {
+  transform: translateY(-2rem);
+}
+.discount_img3 {
+  transform: translateX(-1rem) rotate(10deg);
+}
+
+/*=============== NEW ===============*/
+.new_swiper {
+  width: 220px;
+}
+.new_price {
+  text-decoration: line-through;
+  font-size: small;
+}
+
+.new_img {
+  padding: 5px;
+  box-shadow: -10px -20px 16px hsla(0, 0%, 0%, 0.1);
+}
+
+/*=============== JOIN ===============*/
+
+/*=============== TESTIMONIAL ===============*/
+
+/*=============== FOOTER ===============*/
+
+/*=============== SCROLL BAR ===============*/
+
+/*=============== SCROLL UP ===============*/
+
+/* Show Scroll Up */
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+/* For medium devices */
+
+/* For large devices */

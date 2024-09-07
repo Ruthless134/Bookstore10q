@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="bundles/swiper-bundle.min.css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Abol Bookstore</title>
+  </head>
+
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav_logo"> <i class="ri-book-line"></i>BOOM </a>
+        <div class="nav_menu">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a href="#Home" class="nav_link">
+                <i class="ri-home-2-line"></i>
+                <span>Home</span>
+              </a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#Featured" class="nav_link">
+                <i class="ri-book-line"></i>
+                <span>Featured</span>
+              </a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#Discount" class="nav_link">
+                <i class="ri-price-tag-line"></i>
+                <span>Discount</span>
+              </a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#NewArrivals" class="nav_link">
+                <i class="ri-bookmark-line"></i>
+                <span>New Arrivals</span>
+              </a>
+            </li>
+
+            <li class="nav_item">
+              <a href="#Reviews" class="nav_link">
+                <i class="ri-team-line"></i>
+                <span>Reviews</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav_action">
+          <i class="ri-search-line search-button" id="search-button"></i>
+          <i class="ri-account-box-line login-button" id="login-button"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== SEARCH ====================-->
+    <div class="search" id="search-content">
+      <form action="" class="search_form">
+        <i class="ri-search-line search_icon"></i>
+        <input
+          type="search"
+          placeholder="What are you looking for?"
+          class="search_input"
+        />
+      </form>
+
+      <i class="ri-close-line search_close" id="search-close"></i>
+    </div>
+
+    <!--==================== LOGIN ====================-->
+    <div class="login grid" id="login-content">
+      <form action="" class="login_form grid">
+        <h3 class="login_title">Log In</h3>
+        <div class="login_group grid">
+          <div>
+            <label for="login-email" class="login_label">Email: </label>
+            <input type="email" id="login-email" class="Login_input" />
+          </div>
+
+          <div>
+            <label for="login-password" class="login_label">Password: </label>
+            <input
+              type="password"
+              id="login-password"
+              class="Login_input"
+            /><br />
+            <br />
+            <button type="submit" class="login_button button">Log in</button>
+          </div>
+          <div>
+            <a href="#" class="login_forgot"> You forgot your password? </a>
+            <span class="login_signup">
+              You do not have an account?<br />
+              <a href="#">Sign up</a>
+            </span>
+          </div>
+        </div>
+      </form>
+
+      <i class="ri-close-line login-close login_close" id="login-close"></i>
+    </div>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <div class="home_container container grid">
+          <div class="home_data">
+            <h1 class="home_title">
+              Browse & Buy
+              <br />Hardcover & Paperback Books<br />
+              Find the book of your needs in Ethiopia
+            </h1>
+            <p class="home_description">
+              Find the best books form your favourite authors, explore hundreds
+              of books with one of the best Ethiopian Webstore. Dont miss out on
+              our suprise discounts and more
+            </p>
+            <a href="#" class="button">Explore</a>
+          </div>
+          <div class="home_images">
+            <div class="Home_swiper swiper" id="Homeslide">
+              <div class="swiper-wrapper">
+                <article class="home_article swiper-slide">
+                  <img
+                    src="Book covers/itstartswithus.png"
+                    alt="image"
+                    class="Home_image"
+                  />
+                </article>
+
+                <article class="home_article swiper-slide">
+                  <img
+                    src="Book covers/sixofcrows.png"
+                    alt="image"
+                    class="Home_image"
+                  />
+                </article>
+
+                <article class="home_article swiper-slide">
+                  <img
+                    src="Book covers/shadow.png"
+                    alt="image"
+                    class="Home_image"
+                  />
+                </article>
+
+                <article class="home_article swiper-slide">
+                  <img
+                    src="Book covers/pride.png"
+                    alt="image"
+                    class="Home_image"
+                  />
+                </article>
+                <article class="home_article swiper-slide">
+                  <img
+                    src="Book covers/oneof.png"
+                    alt="image"
+                    class="Home_image"
+                  />
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== SERVICES ====================-->
+      <section class="services section">
+        <div class="services_container container grid">
+          <article class="services_card">
+            <i class="ri-truck-fill"></i>
+            <h3 class="service_title">Free Delivery</h3>
+            <p class="service_discription">Order More Than 3 Books</p>
+          </article>
+
+          <article class="services_card">
+            <i class="ri-git-repository-private-line"></i>
+            <h3 class="service_title">Payment</h3>
+            <p class="service_discription">100% secure</p>
+          </article>
+
+          <article class="services_card">
+            <i class="ri-customer-service-fill"></i>
+            <h3 class="service_title">Support</h3>
+            <p class="service_discription">Call Us Anytime</p>
+          </article>
+        </div>
+      </section>
+
+      <!--==================== FEATURED ====================-->
+      <section class="featured section" id="featured">
+        <h2 class="section_title" align="center">Featured Books</h2>
+        <div class="featured_container container">
+          <div class="featured_swiper swiper">
+            <div class="swiper-wrapper">
+              <article class="Featured_card swiper-slide">
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="Featured_card swiper-slide">
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="Featured_card swiper-slide">
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="Featured_card swiper-slide">
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="Featured_card swiper-slide">
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="Featured_card swiper-slide">
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="Featured_card swiper-slide">
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="Featured_card swiper-slide">
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="Featured_card swiper-slide">
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+
+              <article class="Featured_card swiper-slide">
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+            </div>
+            <div class="swiper-button-prev">
+              <i class="ri-arrow-left-s-line"></i>
+            </div>
+
+            <div class="swiper-button-next">
+              <i class="ri-arrow-right-s-line"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== DISCOUNT ====================-->
+      <section class="discount section" id="discount">
+        <div class="discount_container conrainer grid">
+          <div class="discount_data">
+            <h2 class="discount_title section_title">Up To 30% Discount</h2>
+            <p class="discount_description">
+              Take advantage of our surprise discounts.
+            </p>
+            <a href="#" class="button">shop now</a>
+            <div class="discount_images">
+              <img
+                src="book covers/pride.png"
+                alt="discount books"
+                class="discount_img1"
+              />
+              <img
+                src="book covers/pride.png"
+                alt="discount books"
+                class="discount_img2"
+              />
+              <img
+                src="book covers/pride.png"
+                alt="discount books"
+                class="discount_img3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== NEW Arrivals ====================-->
+      <section class="new Arrivals" id="new">
+        <h2 class="section_title">New Arrivals</h2>
+        <div class="new_container">
+          <div class="new_swiper">
+            <div>
+              <a href="#" class="newcard">
+                <img
+                  src="book covers/shadow.png"
+                  alt="shadow and bone"
+                  class="new_img"
+                />
+                <div>
+                  <h2 class="new_title">New Books</h2>
+                  <div class="new_prices">
+                    <span class="new_discount">1200 Birr</span>
+                    <span class="new_price">1500 Birr</span>
+                  </div>
+                  <div class="new_stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="newcard">
+                <img
+                  src="book covers/shadow.png"
+                  alt="shadow and bone"
+                  class="new_img"
+                />
+                <div>
+                  <h2 class="new_title">New Books</h2>
+                  <div class="new_prices">
+                    <span class="new_discount">1200 Birr</span>
+                    <span class="new_price">1500 Birr</span>
+                  </div>
+                  <div class="new_stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="newcard">
+                <img
+                  src="book covers/shadow.png"
+                  alt="shadow and bone"
+                  class="new_img"
+                />
+                <div>
+                  <h2 class="new_title">New Books</h2>
+                  <div class="new_prices">
+                    <span class="new_discount">1200 Birr</span>
+                    <span class="new_price">1500 Birr</span>
+                  </div>
+                  <div class="new_stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="newcard">
+                <img
+                  src="book covers/shadow.png"
+                  alt="shadow and bone"
+                  class="new_img"
+                />
+                <div>
+                  <h2 class="new_title">New Books</h2>
+                  <div class="new_prices">
+                    <span class="new_discount">1200 Birr</span>
+                    <span class="new_price">1500 Birr</span>
+                  </div>
+                  <div class="new_stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="newcard">
+                <img
+                  src="book covers/shadow.png"
+                  alt="shadow and bone"
+                  class="new_img"
+                />
+                <div>
+                  <h2 class="new_title">New Books</h2>
+                  <div class="new_prices">
+                    <span class="new_discount">1200 Birr</span>
+                    <span class="new_price">1500 Birr</span>
+                  </div>
+                  <div class="new_stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="newcard">
+                <img
+                  src="book covers/shadow.png"
+                  alt="shadow and bone"
+                  class="new_img"
+                />
+                <div>
+                  <h2 class="new_title">New Books</h2>
+                  <div class="new_prices">
+                    <span class="new_discount">1200 Birr</span>
+                    <span class="new_price">1500 Birr</span>
+                  </div>
+                  <div class="new_stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="newcard">
+                <img
+                  src="book covers/shadow.png"
+                  alt="shadow and bone"
+                  class="new_img"
+                />
+                <div>
+                  <h2 class="new_title">New Books</h2>
+                  <div class="new_prices">
+                    <span class="new_discount">1200 Birr</span>
+                    <span class="new_price">1500 Birr</span>
+                  </div>
+                  <div class="new_stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="newcard">
+                <img
+                  src="book covers/shadow.png"
+                  alt="shadow and bone"
+                  class="new_img"
+                />
+                <div>
+                  <h2 class="new_title">New Books</h2>
+                  <div class="new_prices">
+                    <span class="new_discount">1200 Birr</span>
+                    <span class="new_price">1500 Birr</span>
+                  </div>
+                  <div class="new_stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+
+              <a href="#" class="newcard">
+                <img
+                  src="book covers/shadow.png"
+                  alt="shadow and bone"
+                  class="new_img"
+                />
+                <div>
+                  <h2 class="new_title">New Books</h2>
+                  <div class="new_prices">
+                    <span class="new_discount">1200 Birr</span>
+                    <span class="new_price">1500 Birr</span>
+                  </div>
+                  <div class="new_stars">
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-fill"></i>
+                    <i class="ri-star-half-fill"></i>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== JOIN ====================-->
+      <section class="join section"></section>
+
+      <!--==================== Reviews ====================-->
+      <section class="Reviews section" id="Reviews"></section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer"></footer>
+
+    <!--========== SCROLL UP ==========-->
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src=""></script>
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="bundles/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
+    <script src="main.js"></script>
+  </body>
+</html>
