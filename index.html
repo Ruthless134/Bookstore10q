@@ -24,7 +24,7 @@
 
   <body>
     <!--==================== HEADER ====================-->
-    <header class="header" id="header">
+    <header class="header shadow-header" id="header">
       <nav class="nav container">
         <a href="#" class="nav_logo"> <i class="ri-book-line"></i>BOOM </a>
         <div class="nav_menu">
@@ -126,8 +126,8 @@
         <div class="home_container container grid">
           <div class="home_data">
             <h1 class="home_title">
-              Browse & Buy
-              <br />Hardcover & Paperback Books<br />
+              Browse &amp; Buy
+              <br />Hardcover &amp; Paperback Books<br />
               Find the book of your needs in Ethiopia
             </h1>
             <p class="home_description">
@@ -138,9 +138,26 @@
             <a href="#" class="button">Explore</a>
           </div>
           <div class="home_images">
-            <div class="Home_swiper swiper" id="Homeslide">
-              <div class="swiper-wrapper">
-                <article class="home_article swiper-slide">
+            <div
+              class="Home_swiper swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+              id="Homeslide"
+            >
+              <div
+                class="swiper-wrapper"
+                style="
+                  cursor: grab;
+                  transition-duration: 0ms;
+                  transform: translate3d(280px, 0px, 0px);
+                "
+                id="swiper-wrapper-e04bea1dfa5f6926"
+                aria-live="off"
+              >
+                <article
+                  class="home_article swiper-slide swiper-slide-prev"
+                  role="group"
+                  aria-label="1 / 5"
+                  style="margin-right: -20px"
+                >
                   <img
                     src="Book Covers/itstartswithus.png"
                     alt="image"
@@ -148,7 +165,12 @@
                   />
                 </article>
 
-                <article class="home_article swiper-slide">
+                <article
+                  class="home_article swiper-slide swiper-slide-active"
+                  role="group"
+                  aria-label="2 / 5"
+                  style="margin-right: -20px"
+                >
                   <img
                     src="Book Covers/sixofcrows.png"
                     alt="image"
@@ -156,7 +178,12 @@
                   />
                 </article>
 
-                <article class="home_article swiper-slide">
+                <article
+                  class="home_article swiper-slide swiper-slide-next"
+                  role="group"
+                  aria-label="3 / 5"
+                  style="margin-right: -20px"
+                >
                   <img
                     src="Book Covers/shadow.png"
                     alt="image"
@@ -164,14 +191,24 @@
                   />
                 </article>
 
-                <article class="home_article swiper-slide">
+                <article
+                  class="home_article swiper-slide"
+                  role="group"
+                  aria-label="4 / 5"
+                  style="margin-right: -20px"
+                >
                   <img
                     src="Book Covers/pride.png"
                     alt="image"
                     class="Home_image"
                   />
                 </article>
-                <article class="home_article swiper-slide">
+                <article
+                  class="home_article swiper-slide"
+                  role="group"
+                  aria-label="5 / 5"
+                  style="margin-right: -20px"
+                >
                   <img
                     src="Book Covers/oneof.png"
                     alt="image"
@@ -179,6 +216,11 @@
                   />
                 </article>
               </div>
+              <span
+                class="swiper-notification"
+                aria-live="assertive"
+                aria-atomic="true"
+              ></span>
             </div>
           </div>
         </div>
@@ -211,9 +253,266 @@
       <section class="featured section" id="featured">
         <h2 class="section_title" align="center">Featured Books</h2>
         <div class="featured_container container">
-          <div class="featured_swiper swiper">
-            <div class="swiper-wrapper">
-              <article class="Featured_card swiper-slide">
+          <div
+            class="featured_swiper swiper swiper-initialized swiper-horizontal swiper-pointer-events"
+          >
+            <div
+              class="swiper-wrapper"
+              id="swiper-wrapper-719b4429b9a710889"
+              aria-live="off"
+              style="
+                cursor: grab;
+                transition-duration: 0ms;
+                transform: translate3d(-3708px, 0px, 0px);
+              "
+            >
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="1 / 10"
+                data-swiper-slide-index="0"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="2 / 10"
+                data-swiper-slide-index="1"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="3 / 10"
+                data-swiper-slide-index="2"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="4 / 10"
+                data-swiper-slide-index="3"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="5 / 10"
+                data-swiper-slide-index="4"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="6 / 10"
+                data-swiper-slide-index="5"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="7 / 10"
+                data-swiper-slide-index="6"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="8 / 10"
+                data-swiper-slide-index="7"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="9 / 10"
+                data-swiper-slide-index="8"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="10 / 10"
+                data-swiper-slide-index="9"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="1 / 10"
+                data-swiper-slide-index="0"
+              >
                 <img
                   src="Book Covers/oneof.png"
                   alt="image"
@@ -232,7 +531,13 @@
                 </div>
               </article>
 
-              <article class="Featured_card swiper-slide">
+              <article
+                class="Featured_card swiper-slide swiper-slide-prev"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="2 / 10"
+                data-swiper-slide-index="1"
+              >
                 <img
                   src="Book Covers/oneof.png"
                   alt="image"
@@ -251,7 +556,13 @@
                 </div>
               </article>
 
-              <article class="Featured_card swiper-slide">
+              <article
+                class="Featured_card swiper-slide swiper-slide-active"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="3 / 10"
+                data-swiper-slide-index="2"
+              >
                 <img
                   src="Book Covers/oneof.png"
                   alt="image"
@@ -270,7 +581,13 @@
                 </div>
               </article>
 
-              <article class="Featured_card swiper-slide">
+              <article
+                class="Featured_card swiper-slide swiper-slide-next"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="4 / 10"
+                data-swiper-slide-index="3"
+              >
                 <img
                   src="Book Covers/oneof.png"
                   alt="image"
@@ -289,7 +606,13 @@
                 </div>
               </article>
 
-              <article class="Featured_card swiper-slide">
+              <article
+                class="Featured_card swiper-slide"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="5 / 10"
+                data-swiper-slide-index="4"
+              >
                 <img
                   src="Book Covers/oneof.png"
                   alt="image"
@@ -308,7 +631,13 @@
                 </div>
               </article>
 
-              <article class="Featured_card swiper-slide">
+              <article
+                class="Featured_card swiper-slide"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="6 / 10"
+                data-swiper-slide-index="5"
+              >
                 <img
                   src="Book Covers/oneof.png"
                   alt="image"
@@ -327,7 +656,13 @@
                 </div>
               </article>
 
-              <article class="Featured_card swiper-slide">
+              <article
+                class="Featured_card swiper-slide"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="7 / 10"
+                data-swiper-slide-index="6"
+              >
                 <img
                   src="Book Covers/oneof.png"
                   alt="image"
@@ -346,7 +681,13 @@
                 </div>
               </article>
 
-              <article class="Featured_card swiper-slide">
+              <article
+                class="Featured_card swiper-slide"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="8 / 10"
+                data-swiper-slide-index="7"
+              >
                 <img
                   src="Book Covers/oneof.png"
                   alt="image"
@@ -365,7 +706,13 @@
                 </div>
               </article>
 
-              <article class="Featured_card swiper-slide">
+              <article
+                class="Featured_card swiper-slide"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="9 / 10"
+                data-swiper-slide-index="8"
+              >
                 <img
                   src="Book Covers/oneof.png"
                   alt="image"
@@ -384,7 +731,253 @@
                 </div>
               </article>
 
-              <article class="Featured_card swiper-slide">
+              <article
+                class="Featured_card swiper-slide"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="10 / 10"
+                data-swiper-slide-index="9"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="1 / 10"
+                data-swiper-slide-index="0"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="2 / 10"
+                data-swiper-slide-index="1"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="3 / 10"
+                data-swiper-slide-index="2"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="4 / 10"
+                data-swiper-slide-index="3"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="5 / 10"
+                data-swiper-slide-index="4"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="6 / 10"
+                data-swiper-slide-index="5"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="7 / 10"
+                data-swiper-slide-index="6"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="8 / 10"
+                data-swiper-slide-index="7"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="9 / 10"
+                data-swiper-slide-index="8"
+              >
+                <img
+                  src="Book Covers/oneof.png"
+                  alt="image"
+                  class="featured_img"
+                />
+                <h2 class="featured_title">One of Us is Lying</h2>
+                <div class="featured_prices">
+                  <span class="featured_discount">1500 Birr</span>
+                  <span class="featured_price">1800 Birr</span>
+                </div>
+                <button class="button">Order now</button>
+                <div class="featured_actions">
+                  <button><i class="ri-search-line"></i></button>
+                  <button><i class="ri-heart-3-line"></i></button>
+                  <button><i class="ri-eye-line"></i></button>
+                </div>
+              </article>
+              <article
+                class="Featured_card swiper-slide swiper-slide-duplicate"
+                style="width: 293px; margin-right: 16px"
+                role="group"
+                aria-label="10 / 10"
+                data-swiper-slide-index="9"
+              >
                 <img
                   src="Book Covers/oneof.png"
                   alt="image"
@@ -403,13 +996,30 @@
                 </div>
               </article>
             </div>
-            <div class="swiper-button-prev">
+            <div
+              class="swiper-button-prev"
+              tabindex="0"
+              role="button"
+              aria-label="Previous slide"
+              aria-controls="swiper-wrapper-719b4429b9a710889"
+            >
               <i class="ri-arrow-left-s-line"></i>
             </div>
 
-            <div class="swiper-button-next">
+            <div
+              class="swiper-button-next"
+              tabindex="0"
+              role="button"
+              aria-label="Next slide"
+              aria-controls="swiper-wrapper-719b4429b9a710889"
+            >
               <i class="ri-arrow-right-s-line"></i>
             </div>
+            <span
+              class="swiper-notification"
+              aria-live="assertive"
+              aria-atomic="true"
+            ></span>
           </div>
         </div>
       </section>
@@ -448,8 +1058,8 @@
       <section class="new Arrivals" id="new">
         <h2 class="section_title">New Arrivals</h2>
         <div class="new_container">
-          <div class="new_swiper">
-            <div>
+          <div class="new_swiper" style="display: flex; flex-direction: row">
+            <div style="display: flex; flex-wrap: wrap; gap: 50px">
               <a href="#" class="newcard">
                 <img
                   src="Book Covers/shadow.png"
@@ -584,7 +1194,7 @@
 
               <a href="#" class="newcard">
                 <img
-                  src="Book Bovers/shadow.png"
+                  src="Book Covers/shadow.png"
                   alt="shadow and bone"
                   class="new_img"
                 />
@@ -651,10 +1261,94 @@
           </div>
         </div>
       </section>
+
+      <!--==================== JOIN ====================-->
       <section class="join section"></section>
+
+      <!--==================== Reviews ====================-->
       <section class="Reviews section" id="Reviews"></section>
     </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer"></footer>
+
+    <!--========== SCROLL UP ==========-->
+
+    <!--=============== SCROLLREVEAL ===============-->
+    <script src=""></script>
+
+    <!--=============== SWIPER JS ===============-->
     <script src="bundles/swiper-bundle.min.js"></script>
+
+    <!--=============== MAIN JS ===============-->
     <script src="main.js"></script>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+
+    <div id="volume-booster-visusalizer">
+      <div class="sound">
+        <div class="sound-icon"></div>
+        <div class="sound-wave sound-wave_one"></div>
+        <div class="sound-wave sound-wave_two"></div>
+        <div class="sound-wave sound-wave_three"></div>
+      </div>
+      <div class="segments-box">
+        <div data-range="1-20" class="segment"><span></span></div>
+        <div data-range="21-40" class="segment"><span></span></div>
+        <div data-range="41-60" class="segment"><span></span></div>
+        <div data-range="61-80" class="segment"><span></span></div>
+        <div data-range="81-100" class="segment"><span></span></div>
+      </div>
+    </div>
   </body>
 </html>
