@@ -584,9 +584,7 @@ img {
 }
 
 /*=============== NEW ===============*/
-.new_swiper {
-  width: 220px;
-}
+
 .new_price {
   text-decoration: line-through;
   font-size: small;
@@ -615,3 +613,9 @@ img {
 /* For medium devices */
 
 /* For large devices */
+.new_swiper div a {
+  width: 200px;
+}
+.new_container {
+  margin-left: 30px;
+}
