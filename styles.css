@@ -429,7 +429,6 @@ img {
 .nav_link span {
   display: flex;
   margin-right: 25px;
-  text-decoration: underline;
   color: var(--first-color);
   font-size: var(--font-regular);
   font-family: "Times New Roman", Times, serif;
