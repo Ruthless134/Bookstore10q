@@ -37,23 +37,27 @@ window.addEventListener('scroll', shadowHeader);
 let totalSlides = 5;
 let initialSlideIndex = Math.floor(totalSlides / 2);
 
-new Swiper('.Home_swiper', {
-  loop: true,
-  spaceBetween: -20,
-  grabCursor: true,
-  slidesPerView: 'auto',
-  centeredSlides: true,
-  initialSlide: initialSlideIndex,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    1220: { spaceBetween: -20 },
-    768: { spaceBetween: -10 },
-    480: { spaceBetween: -10 }
-  }
-});
+try {
+  new Swiper('.Home_swiper', {
+    loop: true,
+    spaceBetween: -20,
+    grabCursor: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    initialSlide: initialSlideIndex,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      1220: { spaceBetween: -20 },
+      768: { spaceBetween: -10 },
+      480: { spaceBetween: -10 }
+    }
+  });
+} catch (err) {
+  console.error('Home banner carousel failed to load:', err);
+}
 
 /*=============== BOOKSTORE DATA LAYER ===============*/
 const API_BASE = '/api';
@@ -207,3 +211,4 @@ searchInput.addEventListener('input', () => {
 /*=============== INIT ===============*/
 renderFeatured();
 renderGenreTabs().then(renderNewArrivals);
+
