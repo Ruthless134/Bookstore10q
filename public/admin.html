@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="admin.css" />
+  <title>Abol Bookstore — Admin</title>
+</head>
+<body class="admin-body">
+
+  <!-- LOGIN VIEW -->
+  <section id="login-view" class="admin-login">
+    <form id="admin-login-form" class="admin-login_form">
+      <h1><i class="ri-book-line"></i> Abol Admin</h1>
+      <p class="admin-subtitle">Sign in to manage your books</p>
+
+      <label for="admin-username">Username</label>
+      <input type="text" id="admin-username" required autocomplete="username" />
+
+      <label for="admin-password">Password</label>
+      <input type="password" id="admin-password" required autocomplete="current-password" />
+
+      <button type="submit" class="button">Log In</button>
+      <p id="login-error" class="admin-error"></p>
+    </form>
+  </section>
+
+  <!-- DASHBOARD VIEW -->
+  <section id="dashboard-view" class="admin-dashboard" style="display:none;">
+    <header class="admin-header">
+      <h1><i class="ri-book-line"></i> Abol Admin</h1>
+      <div>
+        <a href="index.html" target="_blank" class="admin-link">View site</a>
+        <button id="logout-btn" class="admin-logout">Log out</button>
+      </div>
+    </header>
+
+    <div class="admin-layout">
+      <!-- ADD / EDIT FORM -->
+      <div class="admin-panel">
+        <h2 id="form-title">Add a Book</h2>
+        <form id="book-form" class="admin-form" enctype="multipart/form-data">
+          <input type="hidden" id="book-id" value="" />
+
+          <label for="title">Title *</label>
+          <input type="text" id="title" required />
+
+          <label for="author">Author</label>
+          <input type="text" id="author" />
+
+          <label for="genre">Genre</label>
+          <select id="genre"></select>
+
+          <label for="description">Description</label>
+          <textarea id="description" rows="4"></textarea>
+
+          <div class="admin-form_row">
+            <div>
+              <label for="price">Price (Birr) *</label>
+              <input type="number" id="price" min="0" step="0.01" required />
+            </div>
+            <div>
+              <label for="discountPrice">Discount Price (optional)</label>
+              <input type="number" id="discountPrice" min="0" step="0.01" />
+            </div>
+          </div>
+
+          <label for="cover">Book Cover Image</label>
+          <input type="file" id="cover" accept=".png,.jpg,.jpeg,.webp" />
+          <img id="cover-preview" class="admin-cover-preview" style="display:none;" />
+
+          <div class="admin-form_actions">
+            <button type="submit" class="button" id="submit-btn">Add Book</button>
+            <button type="button" class="admin-cancel" id="cancel-edit-btn" style="display:none;">Cancel edit</button>
+          </div>
+          <p id="form-message" class="admin-message"></p>
+        </form>
+      </div>
+
+      <!-- BOOK LIST -->
+      <div class="admin-panel admin-panel_list">
+        <div class="admin-list_header">
+          <h2>Your Books</h2>
+          <span id="book-count" class="admin-count"></span>
+        </div>
+        <div id="admin-book-list" class="admin-book-list">
+          <p class="empty-message">Loading books...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>
